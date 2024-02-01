@@ -6,7 +6,9 @@ export const NotFoundMainStyled = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   height: 700px;
+  background-image: url("not-found.jpg");
 
   h1 {
     width: fit-content;
@@ -23,5 +25,18 @@ export const NotFoundMainStyled = styled.main`
       background-color: #fff;
       color: #000;
     }
+  }
+`;
+
+export const NotFoundSectionStyled = styled.section`
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: center;
+  background-color: #000;
+
+  a {
+    text-align: center;
   }
 `;

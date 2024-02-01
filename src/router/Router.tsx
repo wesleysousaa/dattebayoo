@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Character from "../pages/characters/Characters";
 import About from "../pages/about/About";
 import Favorites from "../pages/favorites/Favorites";
+import NotFound from "../pages/not-found/NotFound";
 
 export default function Router() {
   return (
@@ -15,6 +16,7 @@ export default function Router() {
         <Route path="characters/:id" element={<Character />} />
         <Route path="/about" element={<About />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
