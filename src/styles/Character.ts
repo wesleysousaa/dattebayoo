@@ -34,12 +34,14 @@ export const TitlePersonalInfosGroupStyled = styled.h3`
 
 export const ListPersonalInfosGroupStyled = styled.ul`
   list-style: none;
+  color: #fff;
 `;
 
 export const PersonalInfosStyled = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  color: #fff;
 `;
 
 export const GalleryStyled = styled.div`

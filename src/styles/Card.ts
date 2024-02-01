@@ -21,6 +21,7 @@ export const CardBodyStyled = styled.div`
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
+  color: #fff;
 `;
 
 export const CardImageStyled = styled.img`
@@ -40,6 +41,7 @@ export const ButtonStyled = styled.button<{ $isLike?: boolean }>`
   cursor: pointer;
   width: 100%;
   justify-content: center;
+  color: #fff;
   background-color: ${(props) => (props.$isLike ? "#ff7300" : "transparent")};
   cursor: pointer;
   &:hover {
