@@ -41,6 +41,7 @@ export const ButtonStyled = styled.button<{ isLike?: boolean }>`
   width: 100%;
   justify-content: center;
   background-color: ${(props) => (props.isLike ? "#ff7300" : "transparent")};
+  cursor: pointer;
   &:hover {
     scale: 1.005;
     transition: 0.2s;

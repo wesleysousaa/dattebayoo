@@ -61,6 +61,7 @@ export const BtnBlackStyled = styled.button`
   font-size: large;
   transition: 0.3s;
   background-color: transparent;
+  cursor: pointer;
   &:hover {
     background-color: #ff7300;
     color: white;
