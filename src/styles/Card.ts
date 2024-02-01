@@ -30,7 +30,7 @@ export const CardImageStyled = styled.img`
   border-radius: 1rem 1rem 0 0;
 `;
 
-export const ButtonStyled = styled.button<{ isLike?: boolean }>`
+export const ButtonStyled = styled.button<{ $isLike?: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,7 @@ export const ButtonStyled = styled.button<{ isLike?: boolean }>`
   cursor: pointer;
   width: 100%;
   justify-content: center;
-  background-color: ${(props) => (props.isLike ? "#ff7300" : "transparent")};
+  background-color: ${(props) => (props.$isLike ? "#ff7300" : "transparent")};
   cursor: pointer;
   &:hover {
     scale: 1.005;

@@ -32,7 +32,7 @@ export default function Card({ character }: cardProps) {
       </CardBodyStyled>
       <CardButtonGroupStyled>
         <ButtonStyled
-          isLike={!!isLiked(character.id)}
+          $isLike={!!isLiked(character.id)}
           onClick={() =>
             !!isLiked(character.id) ? deslike(character.id) : like(character)
           }
