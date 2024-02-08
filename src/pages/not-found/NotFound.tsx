@@ -8,10 +8,11 @@ import {
 export default function NotFound() {
   return (
     <NotFoundMainStyled>
-      {/* <img src="not-found.jpg" alt="Página não encontrada" /> */}
       <NotFoundSectionStyled>
         <TitleSectionStyled>404 - Página não encontrada</TitleSectionStyled>
-        <Link to="/">Ir para o início</Link>
+        <Link to="/" data-testid="back-to-home-not-found">
+          Ir para o início
+        </Link>
       </NotFoundSectionStyled>
     </NotFoundMainStyled>
   );

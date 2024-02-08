@@ -19,17 +19,23 @@ export default function Header() {
         </HeaderTitle>
         <HeaderUlStyled>
           <HeaderLiStyled $isActive={location.pathname === "/" ? true : false}>
-            <Link to={"/"}>Início</Link>
+            <Link to={"/"} data-testid="home-link">
+              Início
+            </Link>
           </HeaderLiStyled>
           <HeaderLiStyled
             $isActive={location.pathname === "/favorites" ? true : false}
           >
-            <Link to={"/favorites"}>Favoritos</Link>
+            <Link to={"/favorites"} data-testid="fav-link">
+              Favoritos
+            </Link>
           </HeaderLiStyled>
           <HeaderLiStyled
             $isActive={location.pathname === "/about" ? true : false}
           >
-            <Link to={"/about"}>Sobre</Link>
+            <Link to={"/about"} data-testid="about-link">
+              Sobre
+            </Link>
           </HeaderLiStyled>
           <HeaderLiStyled>
             <a

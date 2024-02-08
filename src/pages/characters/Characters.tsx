@@ -8,43 +8,18 @@ import {
   CharacterBodyStyled,
   CharacterPageStyled,
   GalleryStyled,
-  ListPersonalInfosGroupStyled,
   NameCharacterStyled,
   PersonalInfosGroupStyled,
   PersonalInfosStyled,
-  TitlePersonalInfosGroupStyled,
 } from "../../styles/Character";
 import { Link, useParams } from "react-router-dom";
-
-interface PersonalInfosGroupProps {
-  data: string[];
-  title: string;
-}
-
-function PersonalInfosGroup({ data, title }: PersonalInfosGroupProps) {
-  return (
-    <div>
-      {
-        <>
-          <TitlePersonalInfosGroupStyled>{title}</TitlePersonalInfosGroupStyled>
-          <ListPersonalInfosGroupStyled>
-            {Array.isArray(data) ? (
-              data?.map((item) => <li key={item}>{item}</li>)
-            ) : (
-              <h3>Nenhuma informação</h3>
-            )}
-          </ListPersonalInfosGroupStyled>
-        </>
-      }
-    </div>
-  );
-}
+import { PersonalInfosGroup } from "../../components/PersonalInfosGroup/PersonalInfosGroup";
 
 export default function Character() {
   const { id } = useParams();
 
   const { getOneById } = useData();
-  const [data, setData] = useState<CharacterType>();
+  const [data, setData] = useState<CharacterType>({} as CharacterType);
 
   useEffect(() => {
     async function fetch() {
@@ -59,7 +34,9 @@ export default function Character() {
     <CharacterPageStyled>
       {data && (
         <>
-          <NameCharacterStyled>{data.name}</NameCharacterStyled>
+          <NameCharacterStyled data-testid="name-char-test">
+            {data.name}
+          </NameCharacterStyled>
           <GalleryStyled>
             {data &&
               data.images?.map((image) => (

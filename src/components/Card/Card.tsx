@@ -24,7 +24,7 @@ export default function Card({ character }: cardProps) {
         alt={`imagem de ${character.personal}`}
       />
       <CardBodyStyled>
-        <h3>{character.name}</h3>
+        <h3 data-testid="char-name-test">{character.name}</h3>
         <CardBodyDescriptionStyled>
           <PGroup title={character.personal.sex} desc="Gênero" />
           <PGroup title={character.personal.clan} desc="Clã" />
@@ -33,6 +33,7 @@ export default function Card({ character }: cardProps) {
       <CardButtonGroupStyled>
         <ButtonStyled
           $isLike={!!isLiked(character.id)}
+          data-testid="char-button-like-test"
           onClick={() =>
             !!isLiked(character.id) ? deslike(character.id) : like(character)
           }

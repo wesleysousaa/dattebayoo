@@ -3,7 +3,7 @@ import { CharacterType } from "../types/CharacterType";
 import { LikeContext } from "../context/LikesContext";
 
 export default function useLikes() {
-  const { likes, setLikes } = useContext(LikeContext);
+  const { likes, setLikes } = useContext(LikeContext || {});
 
   function like(character: CharacterType) {
     if (likes.find((like) => like.id === character.id)) {

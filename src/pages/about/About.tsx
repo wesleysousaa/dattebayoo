@@ -16,7 +16,7 @@ export default function Page() {
         />
         <DescriptionAboutSivStyled>
           <TitleSectionStyled>Sobre nós</TitleSectionStyled>
-          <p>
+          <p data-testid="description-about-test">
             Bem-vindo ao Dattebayo, sua fonte definitiva para explorar o
             universo de Naruto! Aqui, você terá acesso à nossa seção dinâmica de
             personagens, alimentada pela nossa API exclusiva. A cada reload da
@@ -30,7 +30,10 @@ export default function Page() {
             uma jornada através dos lendários ninjas do mundo ninja. Não perca
             tempo, comece sua aventura agora! Dattebayo!
           </p>
-          <LinkAboutStyled href="https://api-dattebayo.vercel.app/">
+          <LinkAboutStyled
+            data-testid="link-about-test"
+            href="https://api-dattebayo.vercel.app/"
+          >
             Acesse a página oficial da API &#10132;
           </LinkAboutStyled>
         </DescriptionAboutSivStyled>

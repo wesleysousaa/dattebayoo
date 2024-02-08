@@ -8,7 +8,6 @@ import { TitleSectionStyled } from "../../styles/Global";
 import useData from "../../hooks/useData";
 import Card from "../../components/Card/Card";
 import { CharacterType } from "../../types/CharacterType";
-import useLikes from "../../hooks/useLikes";
 
 type CharType = {
   id: number;
@@ -47,10 +46,9 @@ export default function Home() {
       <CharacterSectionStyled id="personagens">
         <TitleSectionStyled>Personagens</TitleSectionStyled>
         <CharacterContainerStyled>
-          {data &&
-            data.map((item) => (
-              <Card key={item.id} character={item as CharacterType} />
-            ))}
+          {data.map((item) => (
+            <Card key={item.id} character={item as CharacterType} />
+          ))}
         </CharacterContainerStyled>
       </CharacterSectionStyled>
     </CustomHomeContainerStyled>

@@ -8,8 +8,10 @@ interface props {
 export default function PGroup({ desc, title }: props) {
   return (
     <div>
-      <DescriptionStyled>{desc}</DescriptionStyled>
-      <p>{title ? title : "Sem informações"}</p>
+      <DescriptionStyled data-testid="description-test-id">
+        {desc}
+      </DescriptionStyled>
+      <p data-testid="title-test-id">{title ? title : "Sem informações"}</p>
     </div>
   );
 }
